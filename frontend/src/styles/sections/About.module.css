@@ -1,0 +1,27 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    gap: var(--gap-sm);
+    padding: var(--padding-sm);
+    max-width: var(--max-width-lg);
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap-sm);
+    width: 100%;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    padding: var(--padding-sm);
+    background: var(--teal-500);
+    gap: var(--space-xxs);
+}
