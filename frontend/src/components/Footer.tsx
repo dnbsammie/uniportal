@@ -6,7 +6,7 @@ export default function Footer()  {
         <footer>
             <div className="footer_top">
                 <div className="ftl">
-                    <h4>UniPortal</h4>
+                    <h4><i className="fa-solid fa-layer-group"></i> UniPortal</h4>
                     <small>Facilitando la gestión académica para construir un futuro educativo más eficiente y conectado.</small>
                 </div>
                 <div className="ftr">
@@ -30,7 +30,7 @@ export default function Footer()  {
             </div>
             <hr/>
             <div className="footer_bot">
-                <small className="copyright" aria-label="copyright">&copy; {currentYear} Samuel Rivera.</small>
+                <small className="copyright" aria-label="copyright">&copy; {currentYear} UniPortal Docente. Todos los derechos.</small>
                 <a href="https://github.com/dnbsammie/u1a1-academic" target={"_blank"} className={"fa-brands fa-github"}></a>
             </div>
         </footer>

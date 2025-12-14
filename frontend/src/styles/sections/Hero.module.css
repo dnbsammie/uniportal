@@ -2,6 +2,9 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    height: calc(100vh - 10vh);
+    max-width: var(--max-width-lg);
+    margin: 0 auto;
 }
 
 .hero_l,

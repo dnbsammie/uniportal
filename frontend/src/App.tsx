@@ -4,9 +4,13 @@ import ProtectedRoute from "./auth/ProtectedRoute.tsx";
 
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import DashBoard from "./pages/DashBoard";
 import Courses from "./pages/Courses";
-import Profile from "./pages/Profile";
 import Grades from "./pages/Grades";
+import Schedule from "./pages/Schedule";
+import Messages from "./pages/Messages";
+import Profile from "./pages/Profile";
+import Options from "./pages/Options";
 
 export default function App() {
     const location = useLocation();
@@ -40,13 +44,13 @@ export default function App() {
                     <Route path="/login" element={<Login/>}/>
                     <Route element={<ProtectedRoute />}>
                         <Route index element={<Home />} />
-                        <Route path="/dashboard" element={<Courses />} />
-                        <Route path="/courses" element={<Profile />} />
+                        <Route path="/dashboard" element={<DashBoard />} />
+                        <Route path="/courses" element={<Courses />} />
                         <Route path="/grades" element={<Grades />} />
-                        <Route path="/schedule" element={<Courses />} />
-                        <Route path="/messages" element={<Profile />} />
-                        <Route path="/profile" element={<Grades />} />
-                        <Route path="/options" element={<Grades />} />
+                        <Route path="/schedule" element={<Schedule />} />
+                        <Route path="/messages" element={<Messages />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/options" element={<Options />} />
                     </Route>
                 </Routes>
             </motion.div>

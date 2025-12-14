@@ -4,14 +4,16 @@
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    gap: var(--gap-sm);
-    padding: var(--padding-sm);
+    height: fit-content;
+    gap: var(--gap-md);
+    padding: var(--padding-lg);
     max-width: var(--max-width-lg);
+    margin: 0 auto;
 }
 
 .cards{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: var(--gap-sm);
@@ -21,7 +23,55 @@
 .card {
     border: none;
     border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
     padding: var(--padding-sm);
     background: var(--teal-500);
+    gap: var(--space-sm);
+}
+
+.impact{
+    color:var(--gray-50);
+    border-radius: 20px;
+    border: 1px solid var(--teal-500);
+    padding: var(--padding-sm);
+    background: var(--teal-950);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--gap-sm);
+}
+
+.imp_l{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 50ch;
+    height: 100%;
     gap: var(--space-xxs);
+}
+
+.imp_l p{
+    color: var(--gray-300);
+}
+
+.status {
+    border-radius: 20px;
+    border: 1px solid var(--teal-500);
+    padding: var(--padding-sm);
+    background: var(--teal-900);
+    color:var(--gray-50);
+}
+
+@media (min-width: 768px){
+    .about {
+        gap: var(--space-xs);
+    }
+
+
+    .cards, .impact{
+        flex-direction: row;
+    }
 }

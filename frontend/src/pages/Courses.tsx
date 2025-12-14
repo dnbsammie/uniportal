@@ -4,7 +4,9 @@ export default function Courses() {
     return (
         <>
             <SideBar />
-            <main className="logged"></main>
+            <main className="logged">
+                <h1>Actualmente en desarrollo...</h1>
+            </main>
         </>
     )
 }

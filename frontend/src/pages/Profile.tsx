@@ -1,11 +1,12 @@
 import SideBar from "../components/SideBar.tsx";
 
+
 export default function Profile() {
     return (
         <>
-            <SideBar/>
+            <SideBar />
             <main className="logged">
-                <h1>Profile</h1>
+                <h1>Actualmente en desarrollo...</h1>
             </main>
         </>
     )
