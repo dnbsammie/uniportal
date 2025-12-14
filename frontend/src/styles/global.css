@@ -104,8 +104,6 @@ button {
   color: var(--teal-500);
   border: solid 3px var(--teal-500);
   border-radius: 10px;
-  min-width: 50px;
-  min-height: 20px;
   height: fit-content;
   background-color: transparent;
   font-family: var(--font-primary), sans-serif;
@@ -167,6 +165,10 @@ nav > div {
   align-items: center;
   gap: var(--gap-sm);
   padding: var(--space-xs);
+}
+
+nav button {
+  width: 25ch;
 }
 
 .nav_l {

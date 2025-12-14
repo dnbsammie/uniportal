@@ -1,0 +1,75 @@
+.course {
+    padding: var(--padding-sm);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--gap-sm);
+}
+
+.header {
+    margin-bottom: var(--space-sm);
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    color: var(--teal-950);
+    font-size: 0.9rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    background-color: var(--teal-100);
+    border-radius: 20px;
+    padding: var(--padding-sm);
+}
+
+.block h2 {
+    margin-bottom: 0.75rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 1.5rem;
+}
+
+.block h2 {
+    margin-bottom: 0.75rem;
+}
+
+.topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topics li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.card h4 {
+    margin-bottom: 0.25rem;
+}
+

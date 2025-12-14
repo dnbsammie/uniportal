@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDom from 'react-dom';
 import {HashRouter as Router,Routes,Route} from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 import './styles/variables.css';
@@ -14,7 +13,4 @@ createRoot(document.getElementById('root')!).render(
             </Routes>
         </Router>
     </React.StrictMode>
-//    <HashRouter>
-//        <App/>
-//    </HashRouter>
 )

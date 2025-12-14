@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import DashBoard from "./pages/DashBoard";
 import Courses from "./pages/Courses";
+import SubjectSheet from "./sections/SubjectSheet.tsx";
+import CourseDetail from "./pages/CourseDetail.tsx"
 import Grades from "./pages/Grades";
 import Schedule from "./pages/Schedule";
 import Messages from "./pages/Messages";
@@ -45,7 +47,10 @@ export default function App() {
                     <Route element={<ProtectedRoute />}>
                         <Route index element={<Home />} />
                         <Route path="/dashboard" element={<DashBoard />} />
-                        <Route path="/courses" element={<Courses />} />
+                        <Route path="/courses" element={<Courses />}>
+                            <Route index element={<SubjectSheet/>}/>
+                            <Route path="course1" element={<CourseDetail />} />
+                        </Route>
                         <Route path="/grades" element={<Grades />} />
                         <Route path="/schedule" element={<Schedule />} />
                         <Route path="/messages" element={<Messages />} />

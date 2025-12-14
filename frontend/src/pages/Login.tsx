@@ -67,9 +67,7 @@ export default function Login() {
                 <p>¿Necesitas ayuda? <a href="#">Contacta a Soporte</a></p>
             </div>
             <div className={styles.login_r}>
-                <img src={loginImg} alt="login_image" />
-                <h3>Centraliza tu gestión académica</h3>
-                <p>Accede a tus cursos, calificaciones, y comunicaciones en un solo lugar.</p>
+                <img src={loginImg} alt="login_image" loading="lazy" />
             </div>
 
         </section>

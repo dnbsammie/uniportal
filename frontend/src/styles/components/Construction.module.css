@@ -1,0 +1,32 @@
+.uc {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100dvh;
+    max-width: var(--max-width-sm);
+    padding: var(--padding-sm);
+    gap: var(--gap-sm);
+}
+
+.uc i {
+    font-size: clamp(1.7rem, 2.442rem + 1vw, 3.5rem);
+    color: var(--gray-400);
+}
+
+.uc p {
+    color: var(--gray-400);
+    max-width: 420px;
+}
+
+.uc button {
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--teal-600);
+    color: white;
+    font-weight: 600;
+}

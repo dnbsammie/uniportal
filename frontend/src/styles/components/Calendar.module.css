@@ -1,67 +1,73 @@
-.calendar {
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: var(--padding-sm);
+    height: 10vh;
+    border-bottom: 3px solid var(--teal-500);
+    margin-bottom: var(--space-sm);
 }
 
 .schedule {
-    margin-top: var(--space-xs);
-    background-color: var(--teal-100);
-    width: 100%;
-    max-height: 85%;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: var(--space-xs);
-    grid-row-gap: var(--space-xs);
+    height: 80vh;
+    grid-template-columns: 80px repeat(6, 1fr);
+    grid-template-rows: 50px repeat(4, 1fr);
+    grid-column-gap: var(--space-xxs);
+    grid-row-gap: var(--space-xxs);
+    background: var(--teal-100);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: var(--space-md);
 }
 
-.div1 {
-    grid-area: 1 / 2 / 2 / 3;
+.corner {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.div2 {
-    grid-area: 1 / 3 / 2 / 4;
+.day {
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background: var(--teal-200);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.div3 {
-    grid-area: 1 / 4 / 2 / 5;
+.hour {
+    grid-column: 1;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    border-right: 1px solid rgba(0,0,0,0.1);
 }
 
-.div4 {
-    grid-area: 1 / 5 / 2 / 6;
+.event {
+    background: white;
+    border-radius: 8px;
+    padding: var(--space-xxs);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.div5 {
-    grid-area: 1 / 6 / 2 / 7;
+.event:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.div6 {
-    grid-area: 1 / 7 / 2 / 8;
+.eventMonday {
+    grid-column: 2;
+    grid-row: 2 / span 2;
 }
-
-.div7 {
-    grid-area: 2 / 1 / 3 / 2;
+.eventTuesday {
+    grid-column: 3;
+    grid-row: 3 / span 3;
 }
-
-.div8 {
-    grid-area: 3 / 1 / 4 / 2;
-}
-
-.div9 {
-    grid-area: 4 / 1 / 5 / 2;
-}
-
-.div10 {
-    grid-area: 5 / 1 / 6 / 2;
-}
-
-.div11 {
-    grid-area: 2 / 2 / 4 / 3;
-}
-
-.div12 {
-    grid-area: 4 / 3 / 6 / 4;
-}
-
-.div13 {
-    grid-area: 3 / 7 / 5 / 8;
+.eventThursday {
+    grid-column: 5;
+    grid-row: 4 / span 4;
 }

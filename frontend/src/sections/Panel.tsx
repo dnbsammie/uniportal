@@ -11,8 +11,9 @@ export default function Panel() {
 
     return (
         <section id="panel" aria-labelledby="control-panel" className={styles.panel}>
-            <div className={styles.search}>
-                <input type="text" className={styles.search_bar} placeholder="Busca cursos, estudiantes, mensajes..." />
+            <div className={styles.top}>
+                <h3>DashBoard Principal</h3>
+                <i className="fa-regular fa-bell"></i>
             </div>
             <div className={styles.content}>
                 <h3>Bienvenida, Profesora Tatiana!</h3>

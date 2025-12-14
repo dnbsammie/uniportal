@@ -19,7 +19,7 @@
 
 .login_l {
     display: flex;
-    background: var(--teal-950);
+    background: var(--teal-800);
     padding: var(--padding-md);
     z-index: 10;
 }
@@ -44,8 +44,9 @@ form {
     align-items: flex-start;
     text-align: left;
     gap: var(--gap-sm);
+    border-radius: 5px;
     padding: var(--padding-md);
-    background-color: var(--gray-900);
+    background-color: var(--teal-950);
     color: var(--gray-600);
 }
 
@@ -68,7 +69,6 @@ input:focus {
 label {
     font-size: clamp(0.5rem, 0.640rem + 0.2vw, 0.875rem);
 }
-
 
 button {
     width: 100%;

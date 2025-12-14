@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import SideBar from "../components/SideBar.tsx";
 
 export default function Courses() {
@@ -5,7 +6,7 @@ export default function Courses() {
         <>
             <SideBar />
             <main className="logged">
-                <h1>Actualmente en desarrollo...</h1>
+                <Outlet />
             </main>
         </>
     )

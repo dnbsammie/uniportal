@@ -1,67 +1,43 @@
 import styles from "../styles/components/Calendar.module.css";
 
 export default function Calendar() {
-    const toClass = () => {
-        window.open("#", "_blank");
-    }
+    const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+    const hours = ["5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM","9:00 PM", "10:00PM"];
+    const toMeeting = () => { window.open("https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZGQ5ZTRhMWYtYmQ4Mi00M2E3LWJmNzQtZmM2NzQ1OTJkNGRl%40thread.v2/0?context=%7b%22Tid%22%3a%22ba5b0a4d-6c68-4ac3-9d6e-c5b5a12a9d69%22%2c%22Oid%22%3a%22d3a4f61c-225b-4fa1-a30a-cdca36708e02%22%7d", "_blank"); }
+
     return (
-        <section id="calendar" aria-labelledby="calendar" className={styles.calendar}>
-            <h1>Mi Horario Semanal</h1>
-            <small>Gestiona tus clases, reuniones y tutoías en un solo lugar.</small>
-            <br />
+        <section className={styles.calendar}>
+            <header className={styles.top}>
+                <h3>Mi Horario Semanal</h3>
+            </header>
+
             <div className={styles.schedule}>
-                <div className={styles.div1}>
-                    <h6>Lunes</h6>
-                </div>
-                <div className={styles.div2}>
-                    <h6>Martes</h6>
-                </div>
-                <div className={styles.div3}>
-                    <h6>Miércoles</h6>
-                </div>
-                <div className={styles.div4}>
-                    <h6>Jueves</h6>
-                </div>
-                <div className={styles.div5}>
-                    <h6>Viernes</h6>
-                </div>
-                <div className={styles.div6}>
-                    <h6>Sábado</h6>
-                </div>
-                <div className={styles.div7}>
-                    <p>5:00 P.M.</p>
-                </div>
-                <div className={styles.div8}>
-                    <p>6:00 P.M.</p>
-                </div>
-                <div className={styles.div9}>
-                    <p>7:00 P.M.</p>
-                </div>
-                <div className={styles.div10}>
-                    <p>8:00 P.M.</p>
-                </div>
-                <div className={styles.div11}>
-                    <button onClick={toClass} className={styles.event}>
-                        <h6>Reunión de Coordinación</h6>
-                        <small>8 de Diciembre, 2025 - 5:30 PM</small>
-                        <p>Reunión para discutir el progreso académico.</p>
-                    </button>
-                </div>
-                <div className={styles.div12}>
-                    <button onClick={toClass} className={styles.event}>
-                        <h6 id="Class_Name" aria-labelledby="class name">CLASE: Análisis y Diseño de Sistemas</h6>
-                        <small>9 de Diciembre, 2025 - 7:30 PM</small>
-                        <p>Clase Magistral.</p>
-                    </button>
-                </div>
-                <div className={styles.div13}>
-                    <button onClick={toClass} className={styles.event}>
-                        <h6 id="Class_Name" aria-labelledby="class name">CLASE: Análisis y Diseño de Sistemas</h6>
-                        <small>11 de Diciembre, 2025 - 6:30 PM</small>
-                        <p>Tutoría</p>
-                    </button>
-                </div>
+                <div className={styles.corner} />
+
+                {days.map(day => (
+                    <div key={day} className={styles.day}>{day}</div>
+                ))}
+
+                {hours.map(hour => (
+                    <div key={hour} className={styles.hour}>{hour}</div>
+                ))}
+
+                {/* Eventos */}
+                <button onClick={toMeeting} className={`${styles.event} ${styles.eventMonday}`}>
+                    <h6>Reunión de Coordinación</h6>
+                    <small>5:30 PM</small>
+                </button>
+
+                <button onClick={toMeeting} className={`${styles.event} ${styles.eventTuesday}`}>
+                    <h6>Análisis y Diseño de Sistemas</h6>
+                    <small>7:30 PM</small>
+                </button>
+
+                <button onClick={toMeeting} className={`${styles.event} ${styles.eventThursday}`}>
+                    <h6>Análisis y Diseño de Sistemas</h6>
+                    <small>6:30 PM</small>
+                </button>
             </div>
         </section>
-    )
+    );
 }
