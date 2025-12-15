@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Hero() {
     const navigate = useNavigate();
     const openDemo = () => {
-        window.open("https://www.youtube.com/watch?v=Kga2lK3mZQM", "_blank");
+        window.open("https://www.youtube.com/watch?v=dqAHnJCrquE", "_blank");
     }
 
     return (
